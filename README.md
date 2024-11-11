@@ -96,7 +96,7 @@ int main() {
 
 # Linear Quicksort
 
-A linear or sequential quicksort sorts a data structure by dviding it into two partitions by selecting a `pivot` element and then lpacing all values less that itself on the `left` and values greater on the `right`. It does this recursively and usually sorts the left side, followed by the right. The process continues until the data structure is fully sorted. 
+A linear or sequential quicksort sorts a data structure by dviding it into two partitions by selecting a `pivot` element and then placing all values less than itself on the `left` and values greater on the `right`. It does this recursively and usually sorts the left side, followed by the right. The process continues until the data structure is fully sorted. 
 
 ```cpp
 void quicksortLinear(vector<int>& mockData, int low, int high) {

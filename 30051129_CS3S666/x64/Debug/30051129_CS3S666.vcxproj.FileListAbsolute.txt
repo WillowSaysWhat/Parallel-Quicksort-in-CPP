@@ -1,1 +1,2 @@
 C:\Users\will0\Documents\Year 3\Concurrent\30051129_CS3S666_HuwWilliams\30051129_CS3S666\x64\Debug\30051129_CS3S666.exe
+C:\Users\will0\Documents\GitHub\Parallel-Quicksort-in-C--\30051129_CS3S666\x64\Debug\30051129_CS3S666.exe

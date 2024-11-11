@@ -35,7 +35,7 @@ vector<int> mockData;
 `mockData` is declared as an empty vector of integers, which will store the generated numbers.
 
 ```cpp
-for (size_t i = 0; i < amount; i++) {
+for (int i = 0; i < amount; i++) {
     mockData.push_back(i);
 }
 
@@ -73,7 +73,7 @@ vector<int> mockData(int amount) {
     std::vector<int> mockData;
 
     // make a vector of accending numbers
-    for (size_t i = 0; i < amount; i++) {
+    for (int i = 0; i < amount; i++) {
         mockData.push_back(i);
     }
 

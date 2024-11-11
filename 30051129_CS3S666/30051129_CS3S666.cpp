@@ -14,7 +14,7 @@ using namespace std;
 void quicksortLinear(vector<int>& mockData, int low, int high) {
 
     if (low < high) {
-        // Partition the array and get the pivot index
+        // Partition the array and get the pivot index (pi)
         int pi = partition(mockData, low, high);
 
         // Recursively apply quicksort to the left and right of the pivot
