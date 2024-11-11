@@ -1,5 +1,9 @@
 # Thread Pool Class
 
+<p align="center">
+<img src="/docs/assets/ThreadPoolGIF.gif" alt="partitioning" >
+</p>
+
 A thread Pool manages threads so to prevent thread max from occuring. This allows the sort to manage the number of threads and monitoring task by queueing them in a First In First Out data structure.
 
 This was very difficult to build. At first I tried to create a very simple function, but it soon became apparent that a thread pool is a class. In the end, I gaffa-tapped a working thread pool thanks to this Stack Overflow search: 
@@ -10,18 +14,18 @@ Without these forum posts, the thread pool would likely have not been completed.
 
 ## Implementation
 
-The thread pool class accepts a number (`size_t`) that decides how many threads the pool should implement. This is accepted upon initialisation. The Constructor creates `numThreads` number of threads and places them in the pool using a lambda expression. 
+The thread pool class accepts a number (`int`) that decides how many threads the pool should implement. This is accepted upon initialisation. The Constructor creates `numThreads` number of threads and places them in the pool using a lambda expression. 
 
 I've just discovered Lambda in C++ please forgive me! 
 
 ```cpp
 
 // threadPool.h
-ThreadPool(size_t numThreads);
+ThreadPool(int numThreads);
 
 //threadPool.cpp
 ThreadPool::ThreadPool(size_t numThreads) {
-    for (size_t i = 0; i < numThreads; ++i) {
+    for (int i = 0; i < numThreads; ++i) {
         threads.emplace_back([this] { worker_thread(); });
     }
 }
@@ -136,7 +140,7 @@ Since task is a `std::function<void()>`, it can represent any callable object th
 
 class ThreadPool {
 public:
-    ThreadPool(size_t numThreads);
+    ThreadPool(int numThreads);
     ~ThreadPool();
 
     void enqueue(std::function<void()> task);
@@ -162,7 +166,7 @@ private:
 using namespace std;
 
 // Constructor: starts the specified number of worker threads
-ThreadPool::ThreadPool(size_t numThreads) {
+ThreadPool::ThreadPool(int numThreads) {
     for (size_t i = 0; i < numThreads; ++i) {
         threads.emplace_back([this] { worker_thread(); });
     }

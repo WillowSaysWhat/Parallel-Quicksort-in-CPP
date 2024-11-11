@@ -1,5 +1,9 @@
 # Partition Function
 
+<p align="center">
+<img src="/docs/assets/Partitioning.gif" alt="partitioning" >
+</p>
+
 This is the partitioning function. It finds the last index (pivot) and then organises other data to the left or right of it depending on whether the value is greater than or less than the pivot.
 
 ## Breakdown
