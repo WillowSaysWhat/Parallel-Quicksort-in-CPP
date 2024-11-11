@@ -96,6 +96,10 @@ int main() {
 
 # Linear Quicksort
 
+<p align="center">
+<img src="/docs/assets/linearGif.gif" alt="linear quicksort" >
+</p>
+
 A linear or sequential quicksort sorts a data structure by dviding it into two partitions by selecting a `pivot` element and then placing all values less than itself on the `left` and values greater on the `right`. It does this recursively and usually sorts the left side, followed by the right. The process continues until the data structure is fully sorted. 
 
 ```cpp
@@ -114,7 +118,9 @@ void quicksortLinear(vector<int>& mockData, int low, int high) {
 `quicksortLinear` uses the `partition` function to find its pivot and then sorts the 'left` side recursively, followed by the right. To click throught to see the [partition function](/docs/partition.md).
 
 # Parallel Quicksort
-
+<p align="center">
+<img src="/docs/assets/parallelQuicksort.gif" alt="parallel quicksort" >
+</p>
 Parallel quicksort is an adaptation of quicksort that performs sorting tasks simultaneously across multiple threads or processors. Like quicksort, it selects a `pivot`, partitions elements into subarrays, and sorts recursively. In the parallel approach, each partition can be handled as a separate task, allowing `left` and `right` subarrays to be sorted concurrently. This parallelism accelerates sorting by dividing the workload and distributing it across available resources. A `Thread pool` is used to manage thread allocation. 
 
 ```cpp
